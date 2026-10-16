@@ -105,3 +105,29 @@ Saída:
 ## Versionamento
 
 Os diretórios `data/raw` e `data/interim` não devem ser versionados. Arquivos brutos compactados e artefatos pesados também devem permanecer fora do controle de versão.
+
+
+## Fontes de dados e obtenção dos microdados
+
+O projeto utiliza dados públicos do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP/MEC), obtidos por meio do portal oficial:
+
+**Fonte:** [INEP — Censo Escolar: Resultados](https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/censo-escolar/resultados)
+
+### Procedimento de coleta
+
+Os arquivos foram baixados manualmente, ano a ano, em formato ZIP, e armazenados no diretório `data/raw/`.
+
+O acervo local contempla:
+
+- **Microdados do Censo Escolar:** 2014 a 2025.
+- **Taxas de rendimento escolar por município:** 2014 a 2024.
+
+Os arquivos foram mantidos com nomes padronizados, como `microdados_censo_escolar_2024.zip` e `tx_rend_municipios_2024.zip`, para facilitar sua identificação e processamento pelos scripts Python.
+
+### Armazenamento e reprodução
+
+Os arquivos brutos não são versionados no GitHub devido ao seu volume, de aproximadamente 0,67 GB.
+
+Para reproduzir as análises, é necessário obter os arquivos correspondentes no portal do INEP e armazená-los em `data/raw/`, preservando a nomenclatura esperada pelos scripts.
+
+Os arquivos originais são mantidos sem alterações; os procedimentos de leitura, tratamento e geração de indicadores são executados pelos scripts do projeto.
