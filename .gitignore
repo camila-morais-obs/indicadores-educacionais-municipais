@@ -1,0 +1,25 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+data/raw/
+data/interim/
+*.zip
+*.7z
+*.rar
+logs/
+*.log
+.vscode/
+.env
+.DS_Store
+
+# Resultados e documentos em elaboração
+/exports/auditoria_educacao_cacador/
+/exports/Educacao_Cacador_SC_Resumo_e_Relatorio_Tecnico*.docx
+/outputs/
+
+# Revisar antes de publicar
+/data/processed/
+/exports/painel_educacao_tijucas/
